@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ficha prática GitHub - Perguntas e respostas</title>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 16px; line-height: 1.6; color: #222; }
+    h1 { font-size: 1.6em; }
+    h2 { font-size: 1.15em; margin-top: 1.8em; }
+    .sublinhado { text-decoration: underline; }
+    code { background: #f2f2f2; padding: 1px 4px; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>Ficha prática: manuseamento de conteúdos em repositórios GitHub</h1>
+  <p>Programação Web Avançada · Mestrado em Engenharia Informática e Tecnologia Web</p>
+
+  <ol>
+    <li>
+      <h2>O que são operações de “Commit”, “Push” e “Pop” efetuadas num repositório?</h2>
+      <ul>
+        <li><b>Commit</b>: regista no repositório local um conjunto de alterações (<i>snapshot</i>), com autor, data e mensagem, que passa a fazer parte do histórico.</li>
+        <li><b>Push</b>: envia os commits locais para o repositório remoto (ex.: GitHub).</li>
+        <li><b>Pop</b>: no enunciado corresponde ao <b>pull</b>, que traz os commits do remoto e os integra no ramo local (<code>git pull</code> = <code>git fetch</code> + <code>git merge</code>). Em Git existe ainda o <code>git stash pop</code>, que reaplica alterações guardadas temporariamente com <code>git stash</code>.</li>
+      </ul>
+    </li>
+    <li>
+      <h2>Quais são as vantagens de usar Branchs num repositório git?</h2>
+      <p>Os branches permitem desenvolver funcionalidades, correções ou experiências de forma <span class="sublinhado">isolada</span>, sem afetar o ramo principal (<i>main</i>). As principais vantagens são:</p>
+      <ul>
+        <li>trabalho em paralelo de várias pessoas;</li>
+        <li>revisão de código através de <i>pull requests</i>;</li>
+        <li>integração controlada das alterações;</li>
+        <li>se algo correr mal, basta descartar o branch: o <b>main</b> mantém-se estável e pronto para publicar.</li>
+      </ul>
+    </li>
+    <li>
+      <h2>Nos Merges de conteúdos resultantes de um “Pop” podem resultar em conflitos. Em que consistem e como podem ser resolvidos esses conflitos?</h2>
+      <p>Um conflito acontece quando as <b>mesmas linhas</b> de um ficheiro foram alteradas de forma diferente nos dois lados (local e remoto) e o Git não consegue decidir qual versão manter. O Git marca as zonas em conflito com <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code> e <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>.</p>
+      <p>Para resolver:</p>
+      <ol>
+        <li>editar o ficheiro, escolhendo ou combinando as versões;</li>
+        <li>remover os marcadores de conflito;</li>
+        <li>concluir com <code>git add</code> e <code>git commit</code>.</li>
+      </ol>
+      <p>Ferramentas como o <i>VS Code</i> ajudam a comparar e escolher. <span class="sublinhado">Fazer pull com frequência e commits pequenos reduz os conflitos.</span></p>
+    </li>
+    <li>
+      <h2>“Clone” e “Fork” são formas diferentes de replicar um repositório Git. Quais as diferenças entre eles?</h2>
+      <ul>
+        <li><b>Clone</b>: cria uma cópia <span class="sublinhado">local</span> do repositório, com todo o histórico, e mantém a ligação ao remoto original como <code>origin</code>. Serve para trabalhar nele, se houver permissão de escrita.</li>
+        <li><b>Fork</b>: cria, <span class="sublinhado">no servidor</span> (ex.: GitHub), uma cópia do repositório na conta de outro utilizador, independente do original. É usado para contribuir para projetos sem permissão de escrita: altera-se o fork e propõem-se as mudanças ao original através de um <i>pull request</i>.</li>
+      </ul>
+      <p>Normalmente, depois de fazer fork, faz-se <i>clone</i> do fork para trabalhar localmente.</p>
+    </li>
+  </ol>
+</body>
+</html>
