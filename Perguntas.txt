@@ -2,6 +2,7 @@
 R: Um commit regista no repositório local um conjunto de alterações (snapshot), com autor, data e mensagem, e passa a fazer parte do histórico. O push envia os commits locais para o repositório remoto (ex.: GitHub). O “pop” do enunciado corresponde ao pull: traz os commits do remoto e integra-os no ramo local (git pull = git fetch + git merge). Em Git existe ainda o git stash pop, que reaplica alterações guardadas temporariamente com git stash.
 
 2 – Quais sáo as vantagens de usar Branchs num repositório git?
+R: Os branches permitem desenvolver funcionalidades, correções ou experiências de forma isolada, sem afetar o ramo principal (main). Facilitam o trabalho em paralelo de várias pessoas, a revisão de código através de pull requests e a integração controlada. Se algo correr mal, basta descartar o branch, e o main mantém-se sempre estável e pronto para publicar.
 
 3 – Nos Merges de conteúdos resultantes de um “Pop” podem resultar em conflitos. Em que consistem e como podem ser resolvidos esses conflitos?
 
