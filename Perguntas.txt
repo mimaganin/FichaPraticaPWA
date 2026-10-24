@@ -5,5 +5,6 @@ R: Um commit regista no repositório local um conjunto de alterações (snapshot
 R: Os branches permitem desenvolver funcionalidades, correções ou experiências de forma isolada, sem afetar o ramo principal (main). Facilitam o trabalho em paralelo de várias pessoas, a revisão de código através de pull requests e a integração controlada. Se algo correr mal, basta descartar o branch, e o main mantém-se sempre estável e pronto para publicar.
 
 3 – Nos Merges de conteúdos resultantes de um “Pop” podem resultar em conflitos. Em que consistem e como podem ser resolvidos esses conflitos?
+R: Um conflito acontece quando as mesmas linhas de um ficheiro foram alteradas de forma diferente nos dois lados (local e remoto) e o Git não consegue decidir qual versão manter. O Git marca as zonas em conflito com <<<<<<<, ======= e >>>>>>>. Para resolver, edita-se o ficheiro escolhendo ou combinando as versões, removem-se os marcadores e conclui-se com git add e git commit. Ferramentas como o VS Code ajudam a comparar e escolher. Fazer pull com frequência e commits pequenos reduz os conflitos.
 
 4 – “Clone” e “Fork” são formas diferentes de replicar um repositório Git. Quais as diferenças entre eles?
